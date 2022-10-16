@@ -13,7 +13,7 @@ Note that we made some modifications to SLTev in order to evaluate delay on tran
 
 After installing SLTev, you can then run the following command to reproduce our results, selecting the `EXPERIMENT` (model type and segmentation type) and `LANGPAIR` (en-de, es-en, fr-en, it-en, pt-en) of interest:
 
-	SLTeval -i EXPERIMENT.LANGPAIR.slt LANGPAIR.OSt LANGPAIR.OStt -f slt ref ostt
+	SLTeval -i EXPERIMENT.LANGPAIR.slt LANGPAIR.ost LANGPAIR.ostt -f slt ref ostt
 
 
 ## Retraining Our Models
