@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# Adapted from code from the authors of "Simultaneous Translation for Unsegmented Input: A Sliding Window Approach"
-# by Anonymous, 2022
-# https://openreview.net/forum?id=qid7JuQOFOV
+# Directly adapted from code by Sukanta Sen, many thanks!
+# Sen et al. (2022) "Simultaneous Translation for Unsegmented Input: A Sliding Window Approach"
+# https://arxiv.org/pdf/2210.09754.pdf
 
 import sys, os
 from difflib import SequenceMatcher
