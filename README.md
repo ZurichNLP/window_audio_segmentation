@@ -1,5 +1,5 @@
 # audio_segmentation
-Code and data for the paper "Don't Discard Fixed-Window Audio Segmentation in Speech-to-Text Translation"
+Code and data for the paper ["Don't Discard Fixed-Window Audio Segmentation in Speech-to-Text Translation"](https://arxiv.org/pdf/2210.13363.pdf)
 
 ## Motivation
 
@@ -23,7 +23,7 @@ We provide the code for preparing the training data for fine-tuning, the scripts
 ### Resegmenting the Data
 First, download the train and test data for [MuST-C](https://ict.fbk.eu/must-c/) (note that we used version 1.0)  or [mTEDx](http://www.openslr.org/100) (note that we used [mtedx_iwslt2021.tgz](https://www.openslr.org/resources/100/mtedx_iwslt2021.tgz) for testing).
 
-You can then use our scripts to resegment the training data for finetuning on prefixes, prefixes + context or windows as described in our paper. The only files needed are the yaml-file with the segmentation information, the file with the source text (transcription) and the file with the target text (translation).
+You can then use our scripts to resegment the training data for finetuning on prefixes, prefixes + context or windows as described in our [paper](https://arxiv.org/pdf/2210.13363.pdf). The only files needed are the yaml-file with the segmentation information, the file with the source text (transcription) and the file with the target text (translation).
 
 For prefixes:
 
@@ -111,3 +111,20 @@ where MODELTYPE is either "original", "prefix", "context" or "window".
 Finally, before you can evaluate the output with SLTev (see above), you need to create a specific input format with the following command:
 
 	python translate_scripts/postprocess_merged.py -i OUTFILE.log -o OUTFILE.slt
+
+
+# Citation
+
+If you use this code or data, please cite our [paper](https://arxiv.org/pdf/2210.13363.pdf):
+
+    @inproceedings{amrhein-haddow-2022-dont,
+    title = "Don't Discard Fixed-Window Audio Segmentation in Speech-to-Text Translation",
+    author = {Amrhein, Chantal  and
+      Haddow, Barry},
+    booktitle = "Seventh Conference on Machine Translation (WMT22)",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    eprint = {2210.13363}
+    }
